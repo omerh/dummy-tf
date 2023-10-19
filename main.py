@@ -1,4 +1,4 @@
-import tenserflow as tf
+import tensorflow as tf
 import time
 
 def main():
