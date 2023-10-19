@@ -1,4 +1,4 @@
-import tenserflow as tf
+import tensorflow as tf
 import time
 
 def main():
@@ -8,6 +8,7 @@ def main():
         print(tf.__version__)
         
         
-if __name__ == "main":
+if __name__ == "__main__":
+    print("start")
     main()
 
