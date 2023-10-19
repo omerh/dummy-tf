@@ -1,14 +1,21 @@
 import tensorflow as tf
 import time
+import logging
+from systemd import journal
+
+log = logging.getLogger('demo')
+log.addHandler(journal.JournaldLogHandler())
+log.setLevel(logging.INFO)
+
 
 def main():
     while True:
-        print("Hello World")
+        log.info("start")
         time.sleep(5)
-        print(tf.__version__)
+        log.info(tf.__version__)
         
         
 if __name__ == "__main__":
-    print("start")
+    log.info("sent to journal")
     main()
 
